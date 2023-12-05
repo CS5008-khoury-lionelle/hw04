@@ -1,5 +1,7 @@
-// Compile with: clang -Wall merge_test.c -o merge_test.out
+// Compile with: gcc -Wall merge_test.c -o merge_test.out
+// Windows: change .out to .exe
 // Run with: ./merge_test.out
+// this is used during the team activity for module 05
 
 #include <stdio.h>  // Include file for standard input/output
 #include <stdlib.h> // so we can use atoi()

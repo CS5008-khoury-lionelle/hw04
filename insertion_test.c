@@ -1,4 +1,5 @@
-// Compile with: clang -Wall insertion_test.c -o insertion_test.out
+// Compile with: gcc -Wall insertion_test.c -o insertion_test.out
+// Windows: change .out to .exe
 // Run with: ./insertion_test.out
 
 #include <stdio.h>  // Include file for standard input/output
@@ -35,6 +36,7 @@ int main(int argc, char *argv[])
     printf("\n");
     insertionSortIntegers(dataset6, 11, print);
 
+    // make sure to add your own tests, such what happens when the dataset is {}?
 
-   return 0;
+    return 0;
 }

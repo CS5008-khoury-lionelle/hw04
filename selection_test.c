@@ -1,4 +1,5 @@
-// Compile with: clang -Wall selection_test.c -o selection_test.out
+// Compile with: gcc -Wall selection_test.c -o selection_test.out
+// Windows: change .out to .exe
 // Run with: ./selection_test.out
 
 #include <stdio.h>  // Include file for standard input/output
@@ -36,8 +37,7 @@ int main(int argc, char *argv[])
     printf("\n");
     selectionSortIntegers(dataset6, size, print);
 
-    // Print out an array
-   
+    // make sure to add your own tests, such what happens when the dataset is {}?
 
     return 0;
 }
