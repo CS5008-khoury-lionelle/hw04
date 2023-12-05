@@ -5,9 +5,13 @@ Make sure to go out to at least 100,000 (more are welcome), and you have 10 diff
 
 You are free to write a script to run the program and build your table (then copy that table built into the markdown). If you do that, please include the script into the repo.  Note: merge and quick sorts are going to be explored in the team activity for Module 06. You can start on it now, but welcome to wait.
 
+ 
+
 ### Table [^note]
 | N | Bubble | Selection | Insertion | Merge | Quick |
 | :-- | :--: | :--: | :--: | :--: | :--: |
+
+
 
 
 
@@ -22,8 +26,8 @@ Include the image in your markdown. As a reminder, you save the image in your re
 
 
 
-### 2. Convinced?
-Given the direction of the line chart, are you "convinced" of the complexity of each of the sorts? Why or why not?
+### 2. Analysis
+Looking at the graph and the table, what can you say about the various sorts? Which are the fastest? Which are the slowest? Which are the most consistent? Which are the least consistent? Use this space to reflect in your own words your observations.
 
 
 ### 3. Big O
@@ -100,7 +104,7 @@ What is the average time complexity of your algorithm?
 Sorting algorithms are still being studied today. They often include a statistical analysis of data before sorting. This next question will require some research, as it isn't included in class content. When you call `sort()` or `sorted()` in Python 3.6+, what sort is it using? 
 
 #### 8.1 Visualize
-Find a graphic / visualiation (can be a youtube video) that demonstrates the sort in action. 
+Find a graphic / visualization (can be a youtube video) that demonstrates the sort in action. 
 
 #### 8.2 Big O
 Give the worst and best case time-complexity, and examples that would generate them. 
@@ -117,8 +121,11 @@ Add your references here. A good reference includes an inline citation, such as 
 
 
 ## Footnotes:
-[^note]: You will want at least 10 different N values, probably more to see the curve for Merge and Quick. If bubble, selection, and insertion start to take more than a  minute, you can say $> 60s$. 
-
+[^note]: You will want at least 10 different N values, probably more to see the curve for Merge and Quick. If bubble, selection, and insertion start to take more than a  minute, you can say $> 60s$ or - . For example 
+    | N | Bubble | Selection | Insertion | Merge | Quick |
+    | :-- | :--: | :--: | :--: | :--: | :--: |
+    | 100,000 | 23.13 | 7.24 | 9.05 | 0.01  | 0.009 |
+    | 10,000,000 | - | - | - | 1.398219 | 0.079204  |
 
 <!-- links moved to bottom for easier reading in plain text (btw, this a comment that doesn't show in the webpage generated-->
 [image markdown]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images
