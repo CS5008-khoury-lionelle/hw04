@@ -124,8 +124,8 @@ Add your references here. A good reference includes an inline citation, such as 
 [^note]: You will want at least 10 different N values, probably more to see the curve for Merge and Quick. If bubble, selection, and insertion start to take more than a  minute, you can say $> 60s$ or - . For example 
     | N | Bubble | Selection | Insertion | Merge | Quick |
     | :-- | :--: | :--: | :--: | :--: | :--: |
-    | 100,000 | 23.13 | 7.24 | 9.05 | 0.01  | 0.009 |
-    | 10,000,000 | - | - | - | 1.398219 | 0.079204  |
+    | 10,000|0.197758|0.070548|0.000070|0.000513|0.000230|
+    |100,000|-|-|-|0.131061|0.018602|
 
 <!-- links moved to bottom for easier reading in plain text (btw, this a comment that doesn't show in the webpage generated-->
 [image markdown]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images
