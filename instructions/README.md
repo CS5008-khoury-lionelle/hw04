@@ -1,9 +1,9 @@
-# Homework 05 - Sort Analysis
+# Homework 04 - Sort Analysis
 
 > **Notice**
-> This assignment builds directly on Team Activity 05 - Bubble Sort and Team Activity 06 - Merge Sort. You will want to make the code for the activity is completed. 
+> This assignment builds directly on Team Activity 04 - Bubble Sort and Team Activity 05 - Merge Sort. 
 
-> This is a two week assignment! (essentially both Homework 05 and 06 combined)
+> This is a two week assignment! (essentially both Homework 04 and 05 combined)
 
 For this homework, you will be writing two other Quadratic Sorts, $O(n^2)$: Insertion and Substitution sort. 
 More importantly, you will be running an experiment getting timings for the sorts, and thinking
@@ -15,13 +15,13 @@ Since there are a lot of files with this assignment, let's first examine the fil
 
 The files that you will implement:
 * [sort_helper.h](../sort_helper.h) - should have been implemented in your team activity. Contains the ability to print an int array, and swap two ints. 
-* [sorts.h](../sorts.h) - this is where you will implement your sorts. Please copy the bubble sort of your team activity into this one, and make sure give credit where credit is due. 
+* [sorts.h](../sorts.h) - this is where you will implement your sorts. Please copy the bubble sort, and eventually merge sort of your team activities into this one, and make sure give credit where credit is due. 
 
 
 Support files to help with implementation and experimentation:
 * [insertion_test.c](../insertion_test.c) - provides a few static tests to help with development. 
 * [selection_test.c](../selection_test.c)  - provides a few static tests to help with development.
-* [merge_test.c](../merge_test.c) -- provides a few static tests for merge start (Team Activity 06)
+* [merge_test.c](../merge_test.c) -- provides a few static tests for merge start (Team Activity 05)
 * [tester.c](../tester.c) - this is the main driver of your program. It will randomly generate arrays, and collect the time it takes to sort the array. You can also specify four different sorts to use, so once all your code is working, use this file to generate data for your experiment. If you want, you may considering writing a script that runs this file repeatedly.
 
 
@@ -34,7 +34,7 @@ Both Selection Sort and Insertion Sort are meant to be [in place algorithms]. Th
 
 Make sure to use the resources below to visualize the sorts! 
 
-👉🏽 **Task**: In addition to writing the two sorts, you should place comments in the lines explaining what each line does. The goal of this assignment is to demonstrate understanding. 
+👉🏽 **Task**: In addition to writing the two sorts, you should place comments in the lines explaining what each line does. _The goal of this assignment is to demonstrate understanding._ 
 
 
 ## Selection Sort
@@ -102,7 +102,7 @@ Here is another example:
 
 ## Calculating Times
 
-Using tester.c, generate a table of timings based on total values sorted. You will want build a table similar to the following (the values are made-up)
+Using tester.c, generate a table of timings based on total values sorted. You will want build a table similar to the following (the example values are made-up)
 
 | N | Bubble | Selection | Insertion | Merge | Quick |
 | :-- | :--: | :--: | :--: | :--: | :--: |
