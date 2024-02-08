@@ -1,4 +1,4 @@
-/// to compile: clang -Wall tester.c -o tester.out
+/// to compile: gcc -Wall tester.c -o tester.out
 
 #include <stdio.h>  // Include file for standard input/output
 #include <stdlib.h> // so we can use atoi()
@@ -45,7 +45,8 @@ double sort_and_time(int *array, int size, int type, int print)
 }
 
 // tests a single sorting algorithm, often best for small runs
-void test_one(int type, int size, int print) {
+void test_one(int type, int size, int print)
+{
     int *random = get_random_array(size);
 
     if (print)
@@ -69,34 +70,59 @@ void test_one(int type, int size, int print) {
     free(random);
 }
 
+int *get_copy(int *array, int size)
+{
+    int *copy = (int *)malloc(sizeof(int) * size);
+    for (int i = 0; i < size; i++)
+    {
+        copy[i] = array[i];
+    }
+    return copy;
+}
+
 // tests a group of algorithms, does not print out the results, just the timings
-void test_all(int size) {
+void test_all(int size)
+{
     int *random = get_random_array(size);
+    int *original = get_copy(random, size);
 
     double timings[] = {0, 0, 0, 0, 0};
-    for(int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++)
+    {
         timings[i] = sort_and_time(random, size, i, false);
+        for (int j = 0; j < size; j++)
+        { // reset the array after sorted
+            random[j] = original[j];
+        }
     }
 
-    printf("|%d|%f|%f|%f|%f|%f|", size, timings[0], timings[1], timings[2], 
-                                     timings[3], timings[4]);
+    printf("|%d|%f|%f|%f|%f|%f|", size, timings[0], timings[1], timings[2],
+           timings[3], timings[4]);
 
     free(random);
+    free(original);
 }
 
 // test just merge_quick since the timings are so much quicker
-void test_merge_quick(int size) {
+void test_merge_quick(int size)
+{
     int *random = get_random_array(size);
+    int *original = get_copy(random, size);
 
     double timings[] = {0, 0, 0, 0, 0};
     for (int i = 3; i < 5; i++)
     {
         timings[i] = sort_and_time(random, size, i, false);
+        for (int j = 0; j < size; j++)
+        { // reset the array after sorted
+            random[j] = original[j];
+        }
     }
 
     printf("|%d|-|-|-|%f|%f|", size, timings[3], timings[4]);
 
     free(random);
+    free(original);
 }
 
 int main(int argc, char const *argv[])
@@ -126,11 +152,16 @@ int main(int argc, char const *argv[])
     // Convert the argument of the program into an integer
     const int size = atoi(argv[2]);
 
-    if(type == 6) {
+    if (type == 6)
+    {
         test_merge_quick(size);
-    }else if(type == 5) {
+    }
+    else if (type == 5)
+    {
         test_all(size);
-    }else {
+    }
+    else
+    {
         int print = 0;
         if (argc == 4)
         {
@@ -138,8 +169,6 @@ int main(int argc, char const *argv[])
         }
         test_one(type, size, print);
     }
-
-
 
     return 0;
 }
